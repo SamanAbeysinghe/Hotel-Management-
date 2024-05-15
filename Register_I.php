@@ -1,0 +1,101 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Registration</title>
+	<link rel= "stylesheet" type = "text/css" href= "CSS/Register.css">
+
+</head>
+	<body>
+		<form action="Register.php" method="POST">
+		<header>
+			
+
+
+	<div class="login-box">
+		
+		<br><br><br><h2>Sign Up</h2>
+</br></br></br>
+
+
+		
+
+		<div class="text-box">
+			<input type="text" placeholder="First Name" name="f_name"  id="f_name" required>
+		</div>
+		<div class="text-box">
+			<input type="text" placeholder="Last Name" name="l_name"  id="l_name" required>
+		</div>
+
+
+		<div class="text-box">
+			<input type="text" placeholder="Email" name="email" id="email" required>
+		</div>
+
+		<?php
+            if (@$_GET['EM']==true) 
+                    {
+        ?>
+            <center><font size=4 color="red"><?php echo $_GET['EM'] ?></font></center>
+        <?php   
+                    }
+        ?>
+        <?php
+            if (@$_GET['Invalied']==true) 
+                    {
+        ?>
+            <center><font size=4 color="red"><?php echo $_GET['Invalied'] ?></font></center>
+        <?php   
+                    }
+        ?>
+
+		<div class="text-box">
+			<input type="text" placeholder="Country" name="country" id="country" required>
+		</div>
+
+		<div class="text-box">
+			<input type="text" placeholder="Zip code" name="code" id="code" required>
+		</div>
+
+		<div class="text-box">
+			<input type="text" placeholder="Address" name="address" id="address" required>
+		</div>
+
+		<div class="text-box">
+			<input type="text" placeholder="Contact No" name="contact" id="contact" required>
+		</div>
+
+		<div class="text-box">
+			<input type="Password" placeholder="Password" name="pass" id="pass" required>
+		</div>
+
+		<?php
+            if (@$_GET['Pass']==true) 
+                    {
+        ?>
+            <center><font size=4 color="red"><?php echo $_GET['Pass'] ?></font></center>
+        <?php   
+                    }
+        ?>
+
+		<div class="text-box">
+			<input type="Password" placeholder="Confirm Password" name="conpass" id="conpass" required>
+		</div>
+
+		<div >
+			<input class="btn" type="submit" name="reg" value="Sign Up">
+		</div>
+
+
+
+	</div>
+
+</header>
+</form>
+	</body>
+
+
+</html>

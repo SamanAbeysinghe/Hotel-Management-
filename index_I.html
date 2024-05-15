@@ -1,0 +1,278 @@
+<?php 
+	session_start();
+ ?>
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Hotel Spring View</title>
+	<link rel= "stylesheet" type = "text/css" href= "CSS/index.css">
+
+</head>
+	<body>
+		<header>     
+			<div class="first">
+			<div class = "main">
+				<ul>
+					<li class = "active"><a href = "#">Home</a></li>
+					<li><a href = "#section1">Services</a></li>
+					<li><a href = "#">Contact</a></li>
+					<li><a href = "#">About</a></li>
+					<li><a href="Login_I.php">Login</a></li>
+				</ul>
+			</div>
+			<div class="head_bot">
+				<h2><br><br><br>WELCOME TO HOTEL SPRING VIEW</h2>
+				<p>
+					<br>Hotel Spring View focuses on making your stay as comfortable
+				</p>
+			</div>
+			
+		</header>
+
+		<!--fullscreen modal-->
+		<div id="modal"></div>
+		<!--end of fullscreen modal-->
+		<div id="section1">
+		<!--start of services-->
+		<section class="service_sec-width" id="services">
+				<div class="tile">
+				<h3>Services</h3>
+				</div>
+			<div class="service_contaioner">
+				<!--start of single service-->
+				<article class="service">
+					<div class="service_icon">
+						<img class="food_icon" >
+					</div>
+					<div class="service_content">
+						<h4>Food Service/Food Runner</h4>
+						<p></p>
+					</div>
+				</article>
+				<!--end of single service-->
+				<!--start of single service-->
+				<article class="service">
+					<div class="service_icon">
+						<img class="pool icon" >
+					</div>
+					<div class="service_content">
+						<h4>Refreshment</h4>
+						<p></p>
+					</div>
+				</article>
+				<!--end of single service-->
+				<!--start of single service-->
+				<article class="service">
+					<div class="service_icon">
+						<img class="housekeeping" >
+					</div>
+					<div class="service_content">
+						<h4>Housekeeping</h4>
+						<p></p>
+					</div>
+				</article>
+				<!--end of single service-->
+				<!--start of single service-->
+				<article class="service">
+					<div class="service_icon">
+						<img class="security" >
+					</div>
+					<div class="service_content">
+						<h4>Room security</h4>
+						<p></p>
+					</div>
+				</article>
+				<!--end of single service-->
+			</div>
+		</section>
+		<!--end of services-->
+		<!--start of rooms-->
+		<section class="rooms_sec-width" id="rooms">
+				<div class="tile">
+					<h3>Rooms</h3>
+				</div>
+				<div class="rooms-container">
+					<!--single package-->
+					<article class="room">
+						<div class="room_pic">
+							<img src="Images/Luxury.jpg" alt="room_pic">
+						</div>
+						<div class="room_text">
+							<h4><br>Junior Suite Rooms </h4>
+							<p>
+								<br>A single room with a bed and sitting area. The room size of Junior Suites<br> are 70m²
+							</p>
+							<p class="rate">
+								<span><br>LKR 6500/</span> Per Night
+							</p>
+						</div>
+					</article>
+					<!--end of single package-->
+					<!--single package-->
+					<article class="room">
+						<div class="room_pic">
+							<img src="Images/Triple.jpg" alt="room_pic">
+						</div>
+						<div class="room_text">
+							<h4><br>Triple Rooms</h4>
+							<p>
+								A room that can accommodate three persons and has been<br> fitted with three twin beds. The room size or area of Triple Rooms<br> are 55 m²
+							</p>
+							<p class="rate">
+								<span><br>LKR 4000/</span> Per Night
+							</p>
+						</div>
+					</article>
+					<!--end of single package-->
+					<!--single package-->
+					<article class="room">
+						<div class="room_pic">
+							<img src="Images/double.jpg" alt="room_pic">
+						</div>
+						<div class="room_text">
+							<h4><br>Double Rooms</h4>
+							<p>
+								<br>A room assigned to two people. The room size of Double Rooms <br>are between 40 m² to 45 m²
+							</p>
+							<p class="rate">
+								<span><br>LKR 3500/</span> Per Night
+							</p>
+						</div>
+					</article>
+					<!--end of single package-->
+					<!--single package-->
+					<article class="room">
+						<div class="room_pic">
+							<img src="Images/Single.jpg" alt="room_pic">
+						</div>
+						<div class="room_text">
+							<h4 class="single" id="single">Single Rooms</h4>
+							<p>
+								 A room assigned to one person. May have one bed.The room size <br>of Single Rooms are 37m2 , 39m2 , 40 m²
+							</p>
+							<p class="rate">
+								<span><br>LKR 2500/</span> Per Night
+							</p>
+							
+						</div>
+					</article>
+					<!--end of single package-->
+				</div>
+			
+		</section>
+		<!--end of rooms-->
+		<!--start of booking-->
+		<div class="book">
+		
+		
+			<form class="booking-form" action="Booking.php" method="POST">
+				<div class="form-item">
+					<label for="checking.date">Check In date</label>
+					<input type="date" id="checkin_date" name="checkin_date" required>
+				</div>
+				<div class="form-item">
+					<label for="checkout">Number of days staying</label>
+					<input type="number" min="1" value="1" id="staying_days" name="staying_days" required >
+				</div>
+				<div class="form-item">
+					<label for="Package">Room type</label>
+					<select name="package" id="package" name="package" required>
+						<option value="Junior Suite">Junior Suite</option>
+						<option value="Triple">Triple</option>
+						<option value="Double">Double</option>
+						<option value="Single">Single</option>
+					</select>
+				</div>
+
+				<div class="form-item">
+					<label for="email">Email</label>
+					<input type="text" id="email" name="email" required >
+				</div>
+				<div class="form-item">
+					<input type="submit" class="btn" name="bkk" value="Book Now" >
+				</div>
+
+			</form>
+
+				<?php
+            	if (@$_GET['EM']==true) 
+                    {
+        		?>
+            	<center><font size=8 color="red"><?php echo $_GET['EM'] ?></font></center>
+        		<?php   
+                    }
+        		?>
+        		<?php
+            	if (@$_GET['bk']==true) 
+                    {
+       			 ?>
+            	<center><font size=8 color="green"><?php echo $_GET['bk'] ?></font></center>
+        		<?php   
+                    }
+        		?>
+		
+		
+		</div>
+		<!--end of booking-->
+		<!--start of rooms-->
+		<section class="rooms_sec-width" id="rooms">
+				<div class="tile">
+					<h3><br>Packages</h3>
+				</div>
+				<div class="rooms-container">
+					<!--single package-->
+					<article class="room">
+						<div class="room_pic">
+							<img src="Images/day.jpg" alt="room_pic">
+						</div>
+						<div class="room_text">
+							<h4>Day outing package </h4>
+							<p>
+								<br><br>Welcome drink, buffet lunch, pool facility, evening tea with<br> a piece of cake, a group 10 persons will get changing room free.
+							</p>
+							<p class="rate">
+								<span><br>LKR 1750/</span> Per Person
+							</p>
+							<br>
+						<div class="form-item">
+							<a href="Package_One_I.php"><input type="submit" class="btn" value="Book Now" ></a>
+						</div>
+						</div>
+					</article>
+					<!--end of single package-->
+					<!--single package-->
+					<article class="room">
+						<div class="room_pic">
+							<img src="Images/family.jpg" alt="room_pic">
+						</div>
+						<div class="room_text">
+							<h4>Family package</h4>
+							<p>
+								<br>Enjoy with your family at spring view this Saturday or Sunday<br> with a fantastic spread of international cuisine of lunch, welcome <br>drink, pool facility, evening tea with a piece of cake<br><br>
+children below 12 years at half rate and children under 5 years <br>completely free. A group 10 persons will get changing room free.
+
+							</p>
+							<p class="rate">
+								<span><br>LKR 2000/</span> Per Person
+							</p>
+							<br>
+						<div class="form-item">
+							<a href="Package_Two_I.php"><input type="submit" class="btn" value="Book Now" ></a>
+						</div>
+						</div>
+						
+					</article>
+					<!--end of single package-->
+				</div>
+			
+		</section>
+		<!--end of rooms-->
+		
+		</div>
+
+	</body>
+
+
+
+</html>
