@@ -1,0 +1,80 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+header{
+		background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),  url(register.png);
+
+		height: 120vh;
+		background-size: cover;
+		background-position: center;
+}
+
+
+.login-box{
+
+	width: 300px;
+	height: 620px;
+	position: absolute;
+	margin: 2% auto;
+	margin-top: 100px;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(0,0,0,0.5);
+	padding: 30px;
+
+
+}.login-box h2{
+
+	font-size: 40px;
+	float: left;
+	border-bottom: 6px solid #2182eb;
+	color: white;
+	padding-bottom:20px 0;
+}
+.text-box{
+
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	border-bottom: 1px solid #2182eb;
+
+}
+.text-box i{
+	width: 26px;
+	float: left;
+	text-align: center;
+
+}
+.text-box input{
+	border: none;
+	outline: none;
+	background: none;
+	color: #fff;
+	font-size: 18px;
+	width: 88%;
+	margin: 0 10px
+	float: left;
+
+}
+.btn{
+
+	width: 100%;
+	border:2px solid #2182eb;
+	background: #2182eb;
+	color: #000;
+	padding: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 5px;
+	margin: 12px 0
+}
+.alert{
+	color: #fff;
+}
